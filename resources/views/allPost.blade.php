@@ -22,7 +22,7 @@
                         <!-- Course Content -->
                         
                         <div class="course-content">
-                            <a href="{{route('singlePost', $post->id)}}"><h4>{{$post->title}}</h4></a>
+                            <a href="{{route('singlePost', $post->slug)}}"><h4>{{$post->title}}</h4></a>
                             <div class="meta d-flex align-items-center">
                                 <a href="#">{{$post->user->name}} </a>
                                 <span><i class="fa fa-circle" aria-hidden="true"></i></span>

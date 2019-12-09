@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use Illuminate\Support\Facades\Auth;
+use App\Question;
+use App\Answer;
 
 class UserController extends Controller
 {
@@ -35,7 +39,9 @@ class UserController extends Controller
         $post->category = $request['category'];
         // $post->category = "MK";
         $post->user_id = Auth::id();
-        $post->slug = $request['title'];
+        $post->slug = \Str::slug($request->title);
+        $post->save();
+        $post->slug = \Str::slug($request->title." ".$post->id, '+');
 
         $post->save();
         return redirect('/home');
