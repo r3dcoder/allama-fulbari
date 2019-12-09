@@ -206,51 +206,87 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </footer>
 <script type="text/javascript">
+    $(document).ready(function(){
 
-   
 
-    $.ajaxSetup({
+         $.ajaxSetup({
+                  headers: {
+                      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                  }
+              });
 
-        headers: {
+        $(".submitButton").click(function(e){
 
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            e.preventDefault();
+           // var answer = $("textarea[name=content]").val();
+            // console.log(answer);
+            //var id = $("input[name=id]").val();
+         
+            var id1 = e.target.dataset['id1'];
+            console.log(id1);
+            var answer = $("#"+id1).val();
+            console.log(answer);
 
-        }
+            //var id = $("input[name={id1}]").val();
+            var id2 = e.target.parentNode.dataset['tt'];
+            
+            console.log(id2);
 
-    });
 
-   
+            $.ajax({
 
-    $("#ajaxSubmit").click(function(e){
+               type:'POST',
 
-        e.preventDefault();
-        var answer = $("textarea[name=content]").val();
-        console.log(answer);
-        var id = $("input[name=id]").val();
-        console.log(id);
-        // var email = $("input[name=email]").val();
-        $.ajax({
+               url:"{{route('answer_submit')}}",
+               data:{
+                answer:answer,
+                question_id: id2,
+                key: id1
+            },
+               dataType: "json",
 
-           type:'POST',
+               success:function(data){
 
-           url:"{{route('answer_submit')}}",
-           data:{
-            answer:answer,
-            question_id: id
-        },
-           dataType: "json",
+                       console.log(data);
 
-           success:function(data){
-                console.log(data);
-              alert(data.success);
+                       
 
-           }
+                       // console.log(user);
+                      var node = document.createElement("HR");
+                      document.getElementById("card-body-"+id1).appendChild(node);
+                      
+                      var node = document.createElement("H7");
+                      var textnode = document.createTextNode(data.ans.answer);
+                      node.appendChild(textnode);
+                      document.getElementById("card-body-"+id1).appendChild(node);
+
+                      var node = document.createElement("BR");
+                      document.getElementById("card-body-"+id1).appendChild(node);
+
+                      var node = document.createElement("H7");
+                      
+                      var textnode = document.createTextNode("Replied by "+data.userName +" "+ data.date );
+                      node.appendChild(textnode);
+                      document.getElementById("card-body-"+id1).appendChild(node);
+
+                     }, 
+
+                    error:function(){
+                    console.log("error");
+                   }
+
+            });
+
+      
 
         });
 
-  
 
-    });
+
+});
+   
+
+
 
 </script>
     <!-- ##### Footer Area End ##### -->

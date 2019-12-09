@@ -86,12 +86,19 @@ class HomeController extends Controller
     public function answer_submit(Request $request){
               
         $ans = new Answer();
-        $ans->answer = $request['content'];
-        $ans->question_id = $request['id'];
+        
+        $ans->answer = $request->answer;
+        $ans->question_id = $request['question_id'];
+        $key= $request->key;
         $ans->user_id = Auth::id();
         $ans->save();
-        return redirect()->back();  
-        
+        $data = array(
+            'date'=>$ans->created_at->format('j F, Y') ,
+            'userName'=>$ans->user->name,
+            'ans' => $ans
+        );
+            
+        return response()->json($data);    
     }
     
     
