@@ -87,8 +87,8 @@
                                         <li><a href="contact.html">Contact</a></li> -->
                                     </ul>
                                 </li>
-                                <li><a href="#">বয়ান </a></li>
-                                <li><a href="#">মাদ্রাসা </a></li>
+                                <!-- <li><a href="#">বয়ান </a></li> -->
+                                <!-- <li><a href="#">মাদ্রাসা </a></li> -->
                                 <li><a href="#">মাসাইল</a></li>
                                 <li><a href="{{route('allQuestion')}}">প্রশ্ন-উত্তর</a></li>
                                 <li><a href="#">Create Post</a>

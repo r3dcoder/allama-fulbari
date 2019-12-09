@@ -40,25 +40,30 @@ class HomeController extends Controller
         $posts = Post::where('category', "Biography(জীবনী)")->get();
         return view('allPost', compact('posts'));
     }
-    
-    public function life(){
-        return view('single_post');
-    }
-
-    public function new_post(){
-        return view('createPost');
-    }
     public function singlePost($id){
         $post= Post::find($id);
         return view('singlePost', compact('post'));
     }
-    public function ask_question(){
-        return view('askQuestion');
+    
+    public function life(){
+        return view('single_post');
     }
     public function allQuestion(){
         $questions = Question::all();
         return view('questions', compact('questions'));
     }
+
+
+
+
+    public function new_post(){
+        return view('createPost');
+    }
+    
+    public function ask_question(){
+        return view('askQuestion');
+    }
+    
     
     public function new_post_post(Request $request){
         $post = new Post();
