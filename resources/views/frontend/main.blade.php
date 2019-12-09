@@ -76,18 +76,18 @@
                         <div class="classynav">
                             <ul>
                                 <li><a href="{{ url('/') }}">Home</a></li>
-                                <li><a href="#">জীবনী</a>
-                                    <ul class="dropdown">
+                                <li><a href="{{route('allPost')}}">জীবনী</a>
+                                    <!-- <ul class="dropdown">
                                         <li><a href="#">আল্লামা আব্দুল মতিন চৌধুরী </a></li>
                                         <li><a href="#">হোসাইন আহমদ মাদানী রাঃ </a></li>
                                         <li><a href="{{route('allPost')}}">See All</a></li>
-                                        <!-- <li><a href="single-course.html">Single Courses</a></li>
+                                        <li><a href="single-course.html">Single Courses</a></li>
                                         <li><a href="instructors.html">Instructors</a></li>
                                         <li><a href="blog.html">Blog</a></li>
                                         <li><a href="blog-details.html">Single Blog</a></li>
                                         <li><a href="regular-page.html">Regular Page</a></li>
-                                        <li><a href="contact.html">Contact</a></li> -->
-                                    </ul>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul> -->
                                 </li>
                                 <!-- <li><a href="#">বয়ান </a></li> -->
                                 <!-- <li><a href="#">মাদ্রাসা </a></li> -->
