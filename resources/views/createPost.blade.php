@@ -59,7 +59,7 @@
 
                           <div class="form-group">
                                 <label for="content">Content</label>
-                                <textarea rows="10" name="content" type="text" class="form-control @error('content') is-invalid @enderror" id="content" placeholder="" value="{{old('content')}}" ></textarea>
+                                <textarea rows="20" name="content" type="text" class="summernote" id="content" placeholder="" value="{{old('content')}}" ></textarea>
                                 @error('content')
                                      <div class="alert alert-danger">{{ $message }}</div>
                                  @enderror

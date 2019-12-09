@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+
     
     <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
 
@@ -264,7 +266,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                       document.getElementById("card-body-"+id1).appendChild(node);
 
                       var node = document.createElement("H7");
-                      
+
                       var textnode = document.createTextNode("Replied by "+data.userName +" "+ data.date );
                       node.appendChild(textnode);
                       document.getElementById("card-body-"+id1).appendChild(node);
@@ -303,6 +305,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{{asset('frontend/js/plugins/plugins.js')}}"></script>
     <!-- Active js -->
     <script src="{{asset('frontend/js/active.js')}}"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+    <script>
+
+        $('.summernote').summernote({tabsize: 2,
+        height: 400});
+
+  </script>
 
     <!-- <script>
          jQuery(document).ready(function(){

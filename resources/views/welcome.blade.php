@@ -96,7 +96,7 @@
                         <div class="events-thumb">
                             <img src="{{asset('frontend/img/bg-img/book.jpg')}}" alt="">
                             <h6 class="event-date">August 26</h6>
-                            <h4 class="event-title">Networking Day</h4>
+                            <h4 class="event-title">Shotter Map Kati</h4>
                         </div>
                         <!-- Date & Fee -->
                         <div class="date-fee d-flex justify-content-between">
@@ -104,7 +104,7 @@
                                 <p><i class="fa fa-clock"></i> August 26 @ 9:00 am</p>
                             </div>
                             <div class="events-fee">
-                                <a href="#">$45</a>
+                                <a href="#">1954</a>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                         <div class="events-thumb">
                             <img src="{{asset('frontend/img/bg-img/book.jpg')}}" alt="">
                             <h6 class="event-date">August 7</h6>
-                            <h4 class="event-title">Open Doors Day</h4>
+                            <h4 class="event-title">Sunnate Nobobir Murto Potik</h4>
                         </div>
                         <!-- Date & Fee -->
                         <div class="date-fee d-flex justify-content-between">
@@ -125,7 +125,7 @@
                                 <p><i class="fa fa-clock"></i> August 7 @ 9:00 am</p>
                             </div>
                             <div class="events-fee">
-                                <a href="#" class="free">Free</a>
+                                <a href="#" class="free">2006</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                         <div class="events-thumb">
                             <img src="{{asset('frontend/img/bg-img/book.jpg')}}" alt="">
                             <h6 class="event-date">August 3</h6>
-                            <h4 class="event-title">Creative Leadership</h4>
+                            <h4 class="event-title">Tasawuf</h4>
                         </div>
                         <!-- Date & Fee -->
                         <div class="date-fee d-flex justify-content-between">
@@ -146,7 +146,7 @@
                                 <p><i class="fa fa-clock"></i> August 3 @ 9:00 am</p>
                             </div>
                             <div class="events-fee">
-                                <a href="#">$45</a>
+                                <a href="#">2008</a>
                             </div>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                             <div class="tutor-information text-center">
                                 <h5>Mawlana Syed Mahmudul Hasan</h5>
                                 <span>Teacher & writer</span>
-                                <p>Arabic Language $ Liturature</p>
+                                <p>Arabic Language & Liturature</p>
                                 <!-- <div class="social-info">
                                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>

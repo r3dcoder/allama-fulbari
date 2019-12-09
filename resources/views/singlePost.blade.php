@@ -21,7 +21,7 @@
                     
 
                 <div class="card-preview" style="padding-top: 5px; text-align: justify;">
-                	<p style="text-align: justify; white-space:pre-wrap;">{{$post->content}}</p>
+                	<p style="text-align: justify; white-space:pre-wrap;">{!! $post->content !!}</p>
                     
                 </div>
             
