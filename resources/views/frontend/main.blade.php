@@ -53,12 +53,28 @@
         <!-- Navbar Area -->
         <div class="clever-main-menu">
             <div class="classy-nav-container breakpoint-off">
+
                 <!-- Menu -->
                 <nav class="classy-navbar justify-content-between" id="cleverNav">
 
-                    <!-- Logo -->
-                    <a class="nav-brand" href="{{ url('/') }}"><img src="" alt="হেরার আলো "></a>
 
+                    <!-- Logo -->
+                    <div class="search-area">
+                                <form method="get">
+                                    
+                                    <input autocomplete="off" type="search" name="search" id="search1" placeholder="Search...">
+                                    
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    <div id="post_title">     
+                                    <ul id="overall_list_id" style=" display:inline-block; background:#fff; padding-left: 10px; padding-right: 20px; border-bottom: 1px solid rgba(242,244,248,.7);">
+                                    
+                                    </ul>
+                                </div>
+                                </form>
+                            </div>
+                    
+                     <!-- Search Button -->
+                            
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -67,16 +83,20 @@
                     <!-- Menu -->
                     <div class="classy-menu">
 
+
                         <!-- Close Button -->
+
                         <div class="classycloseIcon">
                             <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
 
                         <!-- Nav Start -->
-                        <div class="classynav">
-                            <ul>
-                                <li><a href="{{ url('/') }}">Home</a></li>
-                                <li><a href="{{route('allPost')}}">জীবনী</a>
+                        <div class="classynav" >
+                          
+                            
+                            <ul >
+                                <li ><a style="color:rgb(255,140,0);" href="{{ url('/') }}">Home</a></li>
+                                <li><a style="color:rgb(255,140,0);" href="{{route('allPost')}}">জীবনী</a>
                                     <!-- <ul class="dropdown">
                                         <li><a href="#">আল্লামা আব্দুল মতিন চৌধুরী </a></li>
                                         <li><a href="#">হোসাইন আহমদ মাদানী রাঃ </a></li>
@@ -91,23 +111,32 @@
                                 </li>
                                 <!-- <li><a href="#">বয়ান </a></li> -->
                                 <!-- <li><a href="#">মাদ্রাসা </a></li> -->
-                                <li><a href="#">মাসাইল</a></li>
-                                <li><a href="{{route('allQuestion')}}">প্রশ্ন-উত্তর</a></li>
-                                <li><a href="#">Create Post</a>
+                                <li><a style="color:rgb(255,140,0);"href="#">মাসাইল</a></li>
+                                <li><a style="color:rgb(255,140,0);" href="{{route('allQuestion')}}">প্রশ্ন-উত্তর</a></li>
+                                <li><a style="color:rgb(255,140,0);"  href="#">Create Post</a>
                                     <ul class="dropdown">
-                                        <li><a href="{{ route('new_post')}}">Article </a></li>
-                                        <li><a href="{{route('ask_question')}}">Ask a Question </a></li>
+                                        <li><a style="color:rgb(255,140,0);" href="{{ route('new_post')}}">Article </a></li>
+                                        <li><a style="color:rgb(255,140,0);" href="{{route('ask_question')}}">Ask a Question </a></li>
                                     </ul>
                                 </li>
                             </ul>
 
                             <!-- Search Button -->
-                            <div class="search-area">
-                                <form action="#" method="post">
-                                    <input type="search" name="search" id="search" placeholder="Search">
+                            <!-- <div class="search-area">
+                                <form method="get">
+                                    
+                                    <input autocomplete="off" type="search" name="search" id="search1" placeholder="Search...">
+                                    
                                     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    <div style="display:inline-block;" id="post_title">     
+                                    <ul id="overall_list_id" style=" display:inline-block; background:#fff; position: relative">
+                                    
+                                    </ul>
+                                </div>
                                 </form>
-                            </div>
+                                
+                            </div> -->
+                            
 
                             <!-- Register / Login -->
                             <div class="register-login-area">
@@ -119,24 +148,24 @@
                         <!-- Authentication Links -->
                         @guest
                             
-                                <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a style="color:rgb(255,140,0);" href="{{ route('login') }}">{{ __('Login') }}</a>
                             
                             @if (Route::has('register'))
                                 
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a style="color:rgb(255,140,0);" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 
                             @endif
                         @else
                             
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a style="color:rgb(255,140,0);" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">
+                                    <a style="color:rgb(255,140,0);" class="dropdown-item" href="#">
                                         {{ __('Profile') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a style="color:rgb(255,140,0);" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -157,6 +186,7 @@
                         </div>
                         <!-- Nav End -->
                     </div>
+
                 </nav>
             </div>
         </div>
@@ -216,6 +246,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                       'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
                   }
               });
+
+         // $("#search1").keyup(function(){
+
+         //    var query = $(this).val();
+         //    console.log(query);
+
+         //    if(query !=''){
+
+         //        $.ajax({
+         //            
+         //            method: "POST",
+         //            data:{
+         //                query:query
+         //            }
+         //            success:function(data){
+
+         //                $('#post_title').fadeIN();
+         //                $('#post_title').html(data);
+         //            }
+
+         //        }),
+         //        error:function(){
+         //            console.log("error");
+         //           }
+         //    }
+
+         // });
 
         $(".submitButton").click(function(e){
 
@@ -290,6 +347,57 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
 
+</script>
+
+<script type="text/javascript">
+    
+       $(document).ready(function(){
+
+        fetch_customer_data();
+
+        function fetch_customer_data(query = '')
+
+        {
+
+            $.ajax({
+
+                url:"{{ route('live_search.action') }}",
+
+                method:'GET',
+
+                data:{query:query},
+
+                dataType:'json',
+
+                success:function(data)
+
+                {
+
+                    console.log(data);
+                    $('#overall_list_id').html(data);
+
+                },
+                error:function(){
+                    console.log("error");
+                   }
+
+
+            })
+
+        }
+
+        $(document).on('keyup', '#search1', function(){
+
+            var query = $(this).val();
+            console.log(query);
+
+            $('#overall_list_id').html('');
+
+            fetch_customer_data(query);
+
+        });
+
+    });
 </script>
     <!-- ##### Footer Area End ##### -->
 

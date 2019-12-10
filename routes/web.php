@@ -23,6 +23,8 @@ Route::get('newhome', 'HomeController@newhome')->name('newhome');
 Route::get('/main', 'HomeController@main')->name('main');
 
 Route::get('/life', 'HomeController@life')->name('life');
+Route::get('/Search', 'HomeController@Search')->name('Search');
+Route::get('/Search/fetch', 'SearchController@action')->name('live_search.action');
 Route::get('/singlePost/{id}', 'HomeController@singlePost')->name('singlePost');
 Route::get('/allPost', 'HomeController@allPost')->name('allPost');
 Route::get('/all/question', 'HomeController@allQuestion')->name('allQuestion');
