@@ -57,7 +57,7 @@
                         <!-- <img src="{{asset('frontend/img/bg-img/book.jpg')}}" alt=""> -->
                         <!-- Course Content -->
                         <div class="course-content">
-                            <a href="{{url('singlePost/hussain+ahmed+madani+10')}}"><h4>মাওলানা আশরাফ আলী থানভী রহ.</h4></a>
+                            <a href="{{url('singlePost/ashraf+ali+thanwi+rah+10')}}"><h4>মাওলানা আশরাফ আলী থানভী রহ.</h4></a>
                             <div class="meta d-flex align-items-center">
                                 <a href="#">হাসসান আহমদ চৌধুরী</a>
                                 <span><i class="fa fa-circle" aria-hidden="true"></i></span>
