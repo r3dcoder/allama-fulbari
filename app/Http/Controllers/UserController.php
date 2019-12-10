@@ -33,6 +33,12 @@ class UserController extends Controller
     
     
     public function new_post_post(Request $request){
+
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            
+        ]);
         $post = new Post();
         $post->title = $request['title'];
         $post->content = $request['content'];
