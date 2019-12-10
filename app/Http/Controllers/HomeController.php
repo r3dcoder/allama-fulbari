@@ -37,7 +37,8 @@ class HomeController extends Controller
         return view('frontend.main');
     }
     public function allPost(){
-        $posts = Post::where('category', "Biography(জীবনী)")->get();
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        // $posts = Post::orderBy('created_at', 'desc')->where('category', "Biography(জীবনী)")->get();
         return view('allPost', compact('posts'));
     }
     public function singlePost($slug){
@@ -49,7 +50,7 @@ class HomeController extends Controller
         return view('single_post');
     }
     public function allQuestion(){
-        $questions = Question::all();
+        $questions = Question::orderBy('created_at', 'desc')->get();
         return view('questions', compact('questions'));
     }
 
