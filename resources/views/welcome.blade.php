@@ -39,7 +39,7 @@
                         <!-- <img src="{{asset('frontend/img/bg-img/book.jpg')}}" alt=""> -->
                         <!-- Course Content -->
                         <div class="course-content">
-                            <h4>হোসাইন আহমদ মাদানী রাঃ</h4>
+                            <h4><a href="{{url('singlePost/hussain+ahmed+madani+9')}}">হোসাইন আহমদ মাদানী রাঃ</a></h4>
                             <div class="meta d-flex align-items-center">
                                 <a href="#">হাসসান আহমদ চৌধুরী</a>
                                 <span><i class="fa fa-circle" aria-hidden="true"></i></span>
