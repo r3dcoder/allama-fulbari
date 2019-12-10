@@ -7,21 +7,21 @@
         font-size: medium;
     }
 </style>
-<div class="container">
+<div class="container" style="padding-bottom: 20px">
     <div class="row justify-content-center">
 
         <div class="col-md-9">
-            <div class="card">
+            <div class="card" >
                
                 <div class="card-header"><h3>{{$post->title}}</h3><a href="#">{{$post->user->name}} ||  </a> <a href="#">{{$post->category}}</a> || {{ $post->created_at->format('j F, Y')}}</div>
                 
 
 
-                <div class="card-body">
+                <div class="card-body" style="padding-top: 5px; padding-bottom: 15px;">
                     
 
-                <div class="card-preview" style="padding-top: 5px; text-align: justify;">
-                	<p style="text-align: justify; white-space:pre-wrap;">{!! $post->content !!}</p>
+                <div class="card-preview" style="padding-top: 5px; padding-bottom: 15px; text-align: justify;">
+                	<p style="text-align: justify; white-space:pre-wrap; font-size: 17px; color:#000;">{!! $post->content !!}</p>
                     
                 </div>
             
