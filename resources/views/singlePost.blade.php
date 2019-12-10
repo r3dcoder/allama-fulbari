@@ -37,7 +37,7 @@
                 <div class="card-header">
                     <h4>Biography</h4>
                     @foreach($Lifes as $life)
-                    <a href="{{route('singlePost', $life->id)}}">{{$life->title}}<br></a>@endforeach
+                    <a href="{{route('singlePost', $life->slug)}}">{{$life->title}}<br></a>@endforeach
                 </div>
                 
 
