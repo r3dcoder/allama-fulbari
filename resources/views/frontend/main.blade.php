@@ -416,6 +416,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
     <script>
 
+      jQuery('.note-video-clip').each(function(){
+            var tmp = jQuery(this).wrap('<p/>').parent().html();
+            jQuery(this).parent().html('<div class="embed-responsive embed-responsive-16by9">'+tmp+'</div>');
+          });
+
         $('.summernote').summernote({tabsize: 2,
         height: 400});
 

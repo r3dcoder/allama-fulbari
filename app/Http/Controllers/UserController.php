@@ -37,7 +37,6 @@ class UserController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
-            
         ]);
         $post = new Post();
         $post->title = $request['title'];
@@ -64,6 +63,10 @@ class UserController extends Controller
         return redirect('/home');  
     }
     public function answer_submit(Request $request){
+
+        $request->validate([
+            'title' => 'answer',
+        ]);
               
         $ans = new Answer();
         
